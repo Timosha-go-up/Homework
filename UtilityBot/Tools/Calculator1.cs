@@ -1,29 +1,32 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace UtilityBot
+namespace UtilityBot.Tools
 {
-    internal class Calculator
-    {
-
-        async public static void Sum(ITelegramBotClient client, Message message, CancellationToken ct)
+   internal  class Calculator
+    {    
+        
+        async public  void Sum(ITelegramBotClient client, Message message, CancellationToken ct)
         {
-            string text = message.Text;
-            string[] strSplit = text.Split([' '], StringSplitOptions.RemoveEmptyEntries);
-            int[] ArrayIntNumbers = new int[strSplit.Length];
-            int result = 0;
+            message.Text ??= string.Empty;
+           
+            string[] strSplit = message.Text.Split([' ',',','.'], StringSplitOptions.RemoveEmptyEntries);
 
-            try
+            int[] ArrayIntNumbers = new int[strSplit.Length];
+
+            int result = default;
+
+            for (int i = 0; i < strSplit.Length; i++) 
             {
-                for (int i = 0; i < strSplit.Length; i++) ArrayIntNumbers[i] = int.Parse(strSplit[i]);
-                for (int i = 0; i < ArrayIntNumbers.Length; i++) result += ArrayIntNumbers[i];
+                if (int.TryParse(strSplit[i], out _)) ArrayIntNumbers[i] = int.Parse(strSplit[i]);
+
+                else { message.Text = $"Error: Ввведены не цифры попробуйте снова "; break; }
+            }
+
+           for (int i = 0; i < ArrayIntNumbers.Length; i++) result += ArrayIntNumbers[i];
                 message.Text = result.ToString();
-            }
-            catch (Exception)
-            {
-                message.Text = $"Error: Ввведены не цифры попробуйте снова ";
-            }
-            await client.SendMessage(message.Chat, $"Result: {message.Text}");
+                                                        
+            await client.SendMessage(message.Chat, $"Result: {message.Text}");            
         }
     }
 }

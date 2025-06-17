@@ -8,7 +8,7 @@ using UtilityBot.Controllers;
 namespace UtilityBot
 {
 
-    public class Program
+    internal class Program
     {
         public static async Task Main()
         {
@@ -28,7 +28,7 @@ namespace UtilityBot
             AppSettings appSettings = BuildAppSettings();
 
             services.AddSingleton(appSettings);
-
+             
             // Подключаем контроллеры сообщений и кнопок
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<TextMessageController>();

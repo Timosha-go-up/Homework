@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task-12-1-5-users", "Task-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityBot", "UtilityBot\UtilityBot.csproj", "{1219DD6C-CD3C-456B-B766-DF0519203FAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task-13-6-1-collection-performance", "Task-13-6-1-collection-performance\Task-13-6-1-collection-performance.csproj", "{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1219DD6C-CD3C-456B-B766-DF0519203FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1219DD6C-CD3C-456B-B766-DF0519203FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1219DD6C-CD3C-456B-B766-DF0519203FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
