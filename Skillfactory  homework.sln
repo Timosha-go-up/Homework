@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityBot", "UtilityBot\Ut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task-13-6-1-collection-performance", "Task-13-6-1-collection-performance\Task-13-6-1-collection-performance.csproj", "{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task-13-6-2-popular-words", "Task-13-6-2-popular-words\Task-13-6-2-popular-words.csproj", "{995DF050-AA7A-4ACB-9E42-256F3276E864}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14FAA854-021B-4B3B-A6E5-5759F5ABEDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995DF050-AA7A-4ACB-9E42-256F3276E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995DF050-AA7A-4ACB-9E42-256F3276E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995DF050-AA7A-4ACB-9E42-256F3276E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995DF050-AA7A-4ACB-9E42-256F3276E864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
