@@ -3,11 +3,10 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 namespace UtilityBot.Controllers
 {
-    public class InlineKeyboardController
+    internal class InlineKeyboardController
     {
         private readonly ITelegramBotClient _telegramClient;
-        public static bool sumNumbersUpOn = false;
-        public static bool messageLenghtOn = false;
+        
         public InlineKeyboardController(ITelegramBotClient telegramBotClient)
         {
             _telegramClient = telegramBotClient;
@@ -37,8 +36,8 @@ namespace UtilityBot.Controllers
 
                         await _telegramClient.SendMessage(callbackQuery.Message.Chat, $"Введите цифры через пробел чтобы посчитать");
 
-                        sumNumbersUpOn = true;
-                        messageLenghtOn = false;
+                        CheckButton.sumNumbersUpOn = true;
+                        CheckButton.messageLenghtOn = false;
 
                         return;
                     }
@@ -51,9 +50,9 @@ namespace UtilityBot.Controllers
 
                         await _telegramClient.SendMessage(callbackQuery.From.Id, $"Вы нажали: {celector}");
 
-                        await _telegramClient.SendMessage(callbackQuery.Message.Chat, $"Отправте любое сообщение чтобы узнать количество символов ");
-                        messageLenghtOn = true;
-                        sumNumbersUpOn = false;
+                        _ = await _telegramClient.SendMessage(callbackQuery.Message.Chat, $"Отправте любое сообщение чтобы узнать количество символов ");
+                        CheckButton.messageLenghtOn = true;
+                        CheckButton.sumNumbersUpOn = false;
                         return;
                     }
             }

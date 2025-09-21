@@ -1,10 +1,10 @@
 ﻿namespace UtilityBot.Configuration
 {
-    public class AppSettings
+    internal class AppSettings
     {
         /// <summary>
         /// Токен Telegram API
         /// </summary>
-        public string BotToken { get; set; }
+        public string? BotToken { get; set; }
     }
 }
